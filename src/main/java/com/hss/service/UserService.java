@@ -1,4 +1,4 @@
-package com.hss.service.user;
+package com.hss.service;
 
 import com.github.pagehelper.PageInfo;
 import com.hss.model.UserDomain;

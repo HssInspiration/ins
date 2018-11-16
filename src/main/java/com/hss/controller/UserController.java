@@ -1,7 +1,7 @@
 package com.hss.controller;
 
 import com.hss.model.UserDomain;
-import com.hss.service.user.UserService;
+import com.hss.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

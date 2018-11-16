@@ -1,10 +1,10 @@
-package com.hss.service.user.impl;
+package com.hss.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.hss.dao.UserDao;
 import com.hss.model.UserDomain;
-import com.hss.service.user.UserService;
+import com.hss.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
