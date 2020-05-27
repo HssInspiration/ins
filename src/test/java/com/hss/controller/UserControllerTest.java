@@ -1,7 +1,7 @@
 package com.hss.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hss.modules.po.UserPo;
+import com.hss.po.UserPo;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,10 +14,8 @@ import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -56,6 +54,15 @@ public class UserControllerTest {
 		RequestBuilder requestBuilder = delete("/user/batch/del")
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(requestJson);
+		mockMvc.perform(requestBuilder)
+				.andDo(print())
+				.andExpect(status().isOk())
+				.andReturn().getResponse().getContentAsString();
+	}
+
+	@Test
+	public void testGetGanZhi() throws Exception {
+		RequestBuilder requestBuilder = get("/user/date");
 		mockMvc.perform(requestBuilder)
 				.andDo(print())
 				.andExpect(status().isOk())
